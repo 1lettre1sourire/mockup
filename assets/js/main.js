@@ -114,3 +114,9 @@ $(function () {
 
   });
 
+{/* <script src="jquery-2.1.4"></script>
+
+//   LOADER
+$(window).on("load",function(){
+    $(".loading").fadeOut("slow");
+}); */}
