@@ -135,6 +135,7 @@ img{
   width: calc(100% - 2rem);
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
+  align-content: center;
 }
 
 .bd-grid{
@@ -323,10 +324,16 @@ img{
 .services__container{
   row-gap: 2.5rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-content: center;
 }
 
 .services__content{
   text-align: center;
+}
+
+.services__button{
+  text-align: center;
+  margin-top: var(--mb-6);
 }
 
 .services__img{
@@ -539,6 +546,7 @@ img{
   .services__container,
   .menu__container{
     margin-top: var(--mb-6);
+    align-content: center;
   }
 
   .menu__container{
@@ -580,5 +588,4 @@ img{
 #header{
   background-color: #BBDEFB;
 }
-
 
