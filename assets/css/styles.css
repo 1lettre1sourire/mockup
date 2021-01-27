@@ -283,12 +283,14 @@ img{
 .home__img{
   width: 300px;
   justify-self: center;
+  display: inline-block;
 }
 
 .logo__img{
   width: 200px;
   height: 200px;
   justify-self: center;
+  display: inline-block;
 }
 
 /*========== BUTTONS ==========*/
@@ -523,7 +525,7 @@ img{
   }
 
   .about__img, .app__img{
-    width: 380px;
+    width: 300px;
     order: -1;
   }
 
@@ -588,7 +590,7 @@ img{
   }
   
   .menu__img{
-    width: 130px;
+    width: 300px;
   }
 
   .app__store{
