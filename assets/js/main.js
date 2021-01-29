@@ -1,53 +1,59 @@
+
 /*==================== SHOW MENU ====================*/
-const showMenu = (toggleId, navId) =>{
+const showMenu = (toggleId, navId, headerID) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
+    header = document.getElementById(headerID)
     
     // Validate that variables exist
     if(toggle && nav){
         toggle.addEventListener('click', ()=>{
             // We add the show-menu class to the div tag with the nav__menu class
             nav.classList.toggle('show-menu')
+            header.classList.toggle('nav-header')
         })
     }
 }
-showMenu('nav-toggle','nav-menu')
+showMenu('nav-toggle','nav-menu', 'header')
 
 /*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
+// const navLink = document.querySelectorAll('.nav__link .l-header')
 
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
+
+// function linkAction(){
+//     const navMenu = document.getElementById('nav-menu')
+//     const header = document.getElementById('header')
+//     // When we click on each nav__link, we remove the show-menu class
+//     // navMenu.classList.remove('show-menu')
+//     header.classList.add('nav-unheader')
+// }
+// navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
+// const sections = document.querySelectorAll('section[id]')
 
-function scrollActive(){
-    const scrollY = window.pageYOffset
+// function scrollActive(){
+//     const scrollY = window.pageYOffset
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+//     sections.forEach(current =>{
+//         const sectionHeight = current.offsetHeight
+//         const sectionTop = current.offsetTop - 50;
+//         sectionId = current.getAttribute('id')
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
-}
-window.addEventListener('scroll', scrollActive)
+//         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+//             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+//         }else{
+//             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+//         }
+//     })
+// }
+// window.addEventListener('scroll', scrollActive)
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
 function scrollHeader(){
     const nav = document.getElementById('header')
     // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 600) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+    if(this.scrollY >= 25) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
 
@@ -97,7 +103,7 @@ const sr = ScrollReveal({
     // reset: true
 });
 
-sr.reveal(`.home__data, .home__img,
+sr.reveal(`.home__data, .home__img, .home__logo,
             .about__data, .about__img,
             .services__content, .services__button, .menu__content,
             .app__data, .app__img,
@@ -106,46 +112,16 @@ sr.reveal(`.home__data, .home__img,
     interval: 200
 })
 
-$(function () {
-    $(document).scroll(function () {
-      var $header = $(".header");
-      $header.toggleClass('scrolled', $(this).scrollTop() > $header.height());
-    });
+// $(function () {
+//     $(document).scroll(function () {
+//       var $header = $(".header");
+//       $header.toggleClass('scrolled', $(this).scrollTop() > $header.height());
+//     });
 
-  });
+//   });
 
 {/* <script src="jquery-2.1.4"></script>
-
 //   LOADER
 $(window).on("load",function(){
     $(".loading").fadeOut("slow");
 }); */}
-
-
-// REGISTER FORM
-/*===== LOGIN SHOW and HIDDEN =====*/
-const signUp = document.getElementById('sign-up'),
-    signIn = document.getElementById('sign-in'),
-    loginIn = document.getElementById('login-in'),
-    loginUp = document.getElementById('login-up')
-
-
-signUp.addEventListener('click', ()=>{
-    // Remove classes first if they exist
-    loginIn.classList.remove('block')
-    loginUp.classList.remove('none')
-
-    // Add classes
-    loginIn.classList.toggle('none')
-    loginUp.classList.toggle('block')
-})
-
-signIn.addEventListener('click', ()=>{
-    // Remove classes first if they exist
-    loginIn.classList.remove('none')
-    loginUp.classList.remove('block')
-
-    // Add classes
-    loginIn.classList.toggle('block')
-    loginUp.classList.toggle('none')
-})

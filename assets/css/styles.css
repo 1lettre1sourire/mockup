@@ -13,10 +13,28 @@
   --text-color-light: #A6A6A6;
   --body-color: #FBFEFD;
   --container-color: #FFFFFF;
+  --box-color: #f2f2f2;
+  --main-blue: #BBDEFB;
+
+  --back-box: #f2f2f2;
+  --front-box:  #f2f2f2;
+  --title: #393939;
+  --icon: #F9D564;
+  --slot: #FFFFFF;
+  --placeholder: #A6A6A6;
+  --text: #393939;
+  --fgdhaa: 393939;
+  --button: #F9D564;
+  --button-text: #ffffff;
+  --change: #F9D564;
+  --button-hover: #ecbd22;
+
+  
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
-  --biggest-font-size: 2.25rem;
+  --biggest-font-size: 3.75rem;
+  --big-font-size:2.25rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -43,7 +61,8 @@
 
 @media screen and (min-width: 768px){
   :root{
-    --biggest-font-size: 4rem;
+    --biggest-font-size: 3.75rem;
+    --big-font-size:2.25rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -141,6 +160,7 @@ img{
 .bd-grid{
   display: grid;
   gap: 1.5rem;
+  align-content: center;
 }
 
 .l-header{
@@ -149,7 +169,7 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: #BBDEFB;
   /* box-shadow: 0 2px 4px rgba(0,0,0,.1); */
 }
 
@@ -178,7 +198,14 @@ img{
     border-radius: 0 0 1rem 1rem;
     z-index: var(--z-fixed);
   }
-  
+  .nav-header{
+  background-color: #ffffff !important;
+  transition: .7s;
+}
+.nav-unheader{
+  background-color: #BBDEFB !important;
+  /* transition: .7s; */
+}
 }
 
 .nav__item{
@@ -214,6 +241,8 @@ img{
   top: var(--header-height);
 }
 
+
+
 /* Active menu */
 .active-link{
   color: var(--first-color);
@@ -225,6 +254,8 @@ img{
   background-color: #fff !important;
   transition: background-color 200ms linear;
 }
+
+
 
 /* .scrolling-header{
   box-shadow: 0 2px 4px rgba(0,0,0,.1);
@@ -269,13 +300,13 @@ img{
 }
 
 .home__title{
-  font-size: var(--biggest-font-size);
+  font-size: var(--big-font-size);
   color: var(--first-color);
   margin-bottom: var(--mb-1);
 }
 
 .home__subtitle{
-  font-size: var(--h1-font-size);
+  font-size: var(--h2-font-size);
   color: var(--title-color);
   margin-bottom: var(--mb-4);
 }
@@ -286,11 +317,19 @@ img{
   display: inline-block;
 }
 
+.home__logo{
+  width: 100px;
+  justify-self: center;
+  display: inline-block;
+}
+
+
 .logo__img{
   width: 200px;
   height: 200px;
   justify-self: center;
   display: inline-block;
+  margin-top: var(--mb-3);
 }
 
 /*========== BUTTONS ==========*/
@@ -598,14 +637,32 @@ img{
   }
 }
 
+
+/* WIDESCREEN ELEMENTS */
 @media screen and (min-width: 960px){
   .bd-container{
     margin-left: auto;
     margin-right: auto;
   }
 
+  .l-header{
+    background-color: #BBDEFB;
+  }
+  
   .home__img{
     width: 500px;
+  }
+
+  .home__title{
+    font-size: var(--biggest-font-size);
+  }
+
+  .home__subtitle{
+    font-size: var(--h1-font-size);
+  }
+
+  .home__logo{
+    width: 150px;
   }
 
   .about__container,
@@ -618,15 +675,14 @@ img{
   background-color: #BBDEFB;
 }
 
-#header{
-  background-color: #BBDEFB;
-}
+/* header background */
+/* #header{
+  background-color: transparent;
+} */
 
 
 
 /* LOADER
-
-
 .loading{
   width: 100%;
   height: 100%;
@@ -638,7 +694,6 @@ img{
   justify-content: center;
   align-items: center;
 }
-
   .loading__dot{
       width: 1rem;
       height: 1rem;
@@ -647,17 +702,13 @@ img{
       border-radius: 50%;
       animation: 0.9s bounce infinite alternate;
     }
-
       :nth-child(2) {
         animation-delay: 0.3s;
       }
-
       :nth-child(3) {
         animation-delay: 0.6s;
       }
     
-
-
 @keyframes bounce {
   to {
     opacity: 0.3;
@@ -679,6 +730,8 @@ img{
   height: 150vh;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  background-color: #BBDEFB;
+  margin-top: var(--mb-4);
 }
 
 .login__content{
@@ -686,14 +739,13 @@ img{
 }
 
 .login__img{
-  justify-self: center;
-  align-content: center;
+  align-items: center;
 }
 
+/* BACK BOX DIMENSION */
 .login__img img{
-  width: 310px;
-  height: 390px;
-  margin-top: 1.5rem;
+  width: 700px;
+  height: 400px;
 }
 
 .login__forms{
@@ -705,7 +757,7 @@ img{
   position: absolute;
   bottom: 1rem;
   width: 100%;
-  background-color: #BBDEFB;
+  background-color: var(--front-box);
   padding: 2rem 1rem;
   border-radius: 1rem;
   text-align: center;
@@ -727,23 +779,25 @@ img{
 }
 
 .login__title{
-  font-size: var(--title-color);
+  font-size: var(--h1-font-size);
   margin-bottom: 2rem;
+  color: var(--title);
 }
+
 
 .login__box{
   display: grid;
   grid-template-columns: max-content 1fr;
   column-gap: .5rem;
   padding: 1.125rem 1rem;
-  background-color: #FFF;
+  background-color: var(--slot);
   margin-top: 1rem;
   border-radius: .5rem;
 }
 
 .login__icon{
   font-size: 1.5rem;
-  color: var(--title-color);
+  color: var(--icon);
 }
 
 .login__input{
@@ -751,13 +805,15 @@ img{
   outline: none;
   font-size: var(--normal-font-size);
   font-weight: 700;
-  color: teal;
+  color: var(--text);
+  background-color: var(--slot);
 }
 
 .login__input::placeholder{
   font-size: var(--normal-font-size);
   font-family: var(--body-font);
-  color: var(--first-color-light);
+  color: var(--placeholder);
+  background-color: var(--slot);
 }
 
 .login__forgot{
@@ -767,15 +823,15 @@ img{
   margin-top: .5rem;
   font-size: var(--small-font-size);
   font-weight: 600;
-  color: var(--first-color-light);
+  color: var(--fgdhaa);
 }
 
 .login__button{
   display: block;
   padding: 1rem;
   margin: 2rem 0;
-  background-color: #e6b411;
-  color: #FFF;
+  background-color: var(--button);
+  color: var(--button-text);
   font-weight: 600;
   text-align: center;
   border-radius: .5rem;
@@ -783,7 +839,7 @@ img{
 }
 
 .login__button:hover{
-  background-color: var(--first-color-dark);
+  background-color: var(--button-hover);
 }
 
 .login__account, .login__signin, .login__signup{
@@ -792,13 +848,23 @@ img{
 }
 
 .login__account{
-  color: var(--first-color-dark);
+  color: var(--fgdhaa);
 }
 
 .login__signin, .login__signup{
-  color: var(--first-color);
+  color: var(--change);
   cursor: pointer;
 }
+
+.login__signup:hover{
+  color: var(--button-hover);
+  text-decoration: underline;
+}
+.login__signin:hover{
+  color: var(--button-hover);
+  text-decoration: underline;
+}
+
 
 .login__social{
   margin-top: 2rem;
@@ -806,7 +872,7 @@ img{
 
 .login__social-icon{
   font-size: 1.5rem;
-  color: var(--first-color-dark);
+  color: var(--fgdhaa);
   margin: 0 1.5rem;
 }
 
@@ -841,11 +907,13 @@ img{
     margin-left: 10rem;
   }
 
+  /* OLD LADY BACKGROUND COLOR */
   .login__img{
     display: flex;
     width: 600px;
-    height: 588px;
-    background-color: var(--first-color-lighten);
+    height: 600px;
+    background-color: var(--back-box);
+    box-shadow: 0 8px 20px rgba(35,0,77,.2);
     border-radius: 1rem;
     padding-left: 1rem;
   }
