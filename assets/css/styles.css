@@ -739,7 +739,11 @@ img{
   margin-right: 1.5rem;
   background-color: #BBDEFB;
   margin-top: var(--mb-4);
+
+  height: calc(110vh + var(--header-height));
+  align-content: center;
 }
+
 
 .login_header{
   box-shadow: 0 2px 4px rgba(0,0,0,.1);
