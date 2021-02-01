@@ -431,6 +431,7 @@ img{
 
 .menu__detail, .menu__preci{
   font-size: var(--small-font-size);
+  color: var(--title-color);
 }
 
 .menu__detail{
@@ -621,12 +622,14 @@ img{
     align-content: center;
   }
 
+  /* MENU ICON OPTIONS AND SIZE */
   .menu__container{
-    grid-template-columns: repeat(3, 210px);
-    column-gap: 4rem;
+    grid-template-columns: repeat(2, 250px);
+    column-gap: 6rem;
   }
   .menu__content{
     padding: 1.5rem;
+    background-color: var(--main-blue);
   }
   .menu__content:hover{
       box-shadow: 0 8px 8px rgba(3,74,40,.15);
