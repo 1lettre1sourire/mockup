@@ -738,7 +738,7 @@ img{
   background-color: var(--main-blue);
   margin-top: var(--mb-4);
 
-  height: calc(110vh + var(--header-height));
+  height: calc(130vh + var(--header-height));
   align-content: center;
 }
 
