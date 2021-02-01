@@ -938,9 +938,9 @@ img{
     margin-top: 0;
   }
 
-  .login__registre, .login__create{
+  /* .login__registre, .login__create{
     left: -11rem;
-  }
+  } */
 
   .login__registre{
     bottom: -2rem;
