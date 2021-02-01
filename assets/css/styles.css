@@ -298,7 +298,7 @@ img{
 
 /*========== HOME ==========*/
 .home__container{
-  height: calc(100vh - var(--header-height));
+  height: calc(110vh + var(--header-height));
   align-content: center;
 }
 
@@ -914,10 +914,10 @@ img{
   }
 
   .login__content{
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(1, max-content);
     justify-content: center;
     align-items: center;
-    margin-left: 10rem;
+    /* margin-left : 10rem; */
   }
 
   /* OLD LADY BACKGROUND COLOR */
