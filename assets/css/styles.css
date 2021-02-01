@@ -23,7 +23,7 @@
   --slot: #FFFFFF;
   --placeholder: #A6A6A6;
   --text: #393939;
-  --fgdhaa: 393939;
+  --fgdhaa: #393939;
   --button: #F9D564;
   --button-text: #ffffff;
   --change: #F9D564;
@@ -84,10 +84,11 @@ html{
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
   --title-color: #ffffff;
-  --text-color: yellow;
-  --body-color: blue;
-  --container-color: red;
-  --title-color:green;
+  --text-color: #393939;
+  --body-color: #BBDEFB;
+  --container-color: #ffffff;
+  --title-color:#393939;
+  --main-blue: #ffffff;
 }
 
 /*========== Button Dark/Light ==========*/
@@ -172,7 +173,7 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #BBDEFB;
+  background-color: var(--main-blue);
   /* box-shadow: 0 2px 4px rgba(0,0,0,.1); */
 }
 
@@ -205,10 +206,7 @@ img{
   background-color: #ffffff !important;
   transition: .7s;
 }
-.nav-unheader{
-  background-color: #BBDEFB !important;
-  /* transition: .7s; */
-}
+
 }
 
 .nav__item{
@@ -305,7 +303,7 @@ img{
 .home__title{
   font-size: var(--big-font-size);
   color: var(--first-color);
-  margin-bottom: var(--mb-1);
+  margin-bottom: 0;
 }
 
 .home__subtitle{
@@ -473,7 +471,7 @@ img{
 /*========== CONTACT ==========*/
 .contact__container{
   text-align: center;
-  background-color: #BBDEFB;
+  background-color: var(--main-blue);
   padding: 2rem;
   border-radius: 1.5rem;
 }
@@ -629,7 +627,7 @@ img{
   }
   .menu__content{
     padding: 1.5rem;
-    background-color: var(--main-blue);
+    background-color: var(--container-color);
   }
   .menu__content:hover{
       box-shadow: 0 8px 8px rgba(3,74,40,.15);
@@ -653,11 +651,11 @@ img{
   }
 
   .l-header{
-    background-color: #BBDEFB;
+    background-color: var(--main-blue);
   }
   
   .home__img{
-    width: 500px;
+    width: 800px;
   }
 
   .home__title{
@@ -679,7 +677,7 @@ img{
 }
 
 #home{
-  background-color: #BBDEFB;
+  background-color: var(--main-blue);
 }
 
 /* header background */
@@ -737,7 +735,7 @@ img{
   height: 150vh;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  background-color: #BBDEFB;
+  background-color: var(--main-blue);
   margin-top: var(--mb-4);
 
   height: calc(110vh + var(--header-height));
