@@ -173,8 +173,9 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--main-blue);
-  /* box-shadow: 0 2px 4px rgba(0,0,0,.1); */
+  /* NAV BAR BACKGROUND COLOR  */
+  background-color: var(--container-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
 /*========== NAV ==========*/
@@ -196,7 +197,7 @@ img{
     width: 100%;
     padding: 1.5rem 0 1rem;
     text-align: center;
-    background-color: var(--body-color);
+    background-color: var(--container-color);
     transition: .4s;
     box-shadow: 0 4px 4px rgba(0,0,0,.1);
     border-radius: 0 0 1rem 1rem;
@@ -299,6 +300,10 @@ img{
   height: calc(110vh + var(--header-height));
   align-content: center;
 }
+.letter__container{
+  height: calc(110vh + var(--header-height));
+  align-content: center;
+}
 
 .home__title{
   font-size: var(--big-font-size);
@@ -312,8 +317,27 @@ img{
   margin-bottom: var(--mb-4);
 }
 
+.home__letter__title{
+  font-size: var(--big-font-size);
+  color: var(--first-color);
+  margin-bottom: 0;
+  width: 400px;
+}
+
+.home__letter__subtitle{
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-4);
+}
+
 .home__img{
   width: 300px;
+  justify-self: center;
+  display: inline-block;
+}
+
+.home__letter__img{
+  width: 200px;
   justify-self: center;
   display: inline-block;
 }
@@ -559,6 +583,10 @@ img{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
   }
+  .letter__container{
+    grid-template-columns: repeat(3,2fr);
+    align-items: center;
+  }
 
   .about__data, .about__initial,
   .app__data, .app__initial,
@@ -613,6 +641,12 @@ img{
     justify-items: center;
     text-align: center;
   }
+  .letter__container{
+    height: 100vh;
+    justify-items: center;
+    text-align: center;
+    column-gap: 1rem;
+  }
 
   .services__container,
   .menu__container{
@@ -651,11 +685,15 @@ img{
   }
 
   .l-header{
-    background-color: var(--main-blue);
+    background-color: var(--container-color);
   }
   
   .home__img{
     width: 800px;
+  }
+
+  .home__letter__img{
+    width: 300px;
   }
 
   .home__title{
@@ -663,7 +701,15 @@ img{
   }
 
   .home__subtitle{
-    font-size: var(--h1-font-size);
+    font-size: var(--h2-font-size);
+  }
+
+  .home__letter__title{
+    font-size: 3.7rem;
+  }
+
+  .home__letter__subtitle{
+    font-size: var(--h2-font-size);
   }
 
   .home__logo{
@@ -950,3 +996,222 @@ img{
     bottom: -5.5rem;
   }
 }
+
+/********** LETTER *****************/
+.letter{
+  margin-top: var(--mb-6);
+}
+
+.wrapper{
+    max-width: 700px;
+    width: 100%;
+    background-color: var(--main-blue);
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.12);
+    border-radius: 25px;
+}
+
+.wrapper .letter__title{
+  font-weight: 400;
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+  color: var(--title);
+}
+
+.wrapper .letter__form{
+  width: 100%;
+}
+
+.wrapper .letter__form .input__field{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .letter__form .input__field label{
+   width: 100px;
+   /* color: #757575; */
+   margin-right: 10px;
+  /* font-size: 14px; */
+  
+  font-weight: 400;
+  font-size: var(--h3-font-size);
+  /* margin-bottom: .5rem; */
+  color: var(--title);
+}
+
+.wrapper .letter__form .input__field .input,
+.wrapper .letter__form .input__field .letter__content{
+  width: 50%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.wrapper .letter__form .input__field .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .letter__form .input__field .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .letter__form .input__field .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .letter__form .input__field .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .letter__form .input__field .input:focus,
+.wrapper .letter__form .input__field .textarea:focus,
+.wrapper .letter__form .input__field .custom_select select:focus{
+  border: 1px solid #fec107;
+}
+
+.wrapper .letter__form .input__field p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper .letter__form .input__field .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .letter__form .input__field .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .letter__form .input__field .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fec107;
+  display: block;
+  position: relative;
+}
+.wrapper .letter__form .input__field .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .letter__form .input__field .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #fec107;
+}
+
+.wrapper .letter__form .input__field .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper .letter__form .input__field .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #fec107;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .letter__form .input__field .btn:hover{
+  background: #ffd658;
+}
+
+.wrapper .letter__form .input__field:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper .letter__form .input__field{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .letter__form .input__field label{
+    margin-bottom: 5px;
+  }
+  .wrapper .letter__form .input__field.terms{
+    flex-direction: row;
+  }
+}
+
+
+/* ****************** LOCATION ***************** */
+/* 
+.country:hover{
+  stroke: #393939;
+  stroke-width: 1.5px;
+}
+.text{
+  font-size: 10px;
+  text-transform: capitalize;
+}
+#container {
+  margin: 50px;
+  border: 1px solid;
+  border-radius: 50px;
+  height:80%;
+  overflow:hidden;
+  background: #fff;
+}
+.hidden { 
+  display: none; 
+}
+div.tooltip {
+  color: #222; 
+  background: #fff; 
+  padding: .5em; 
+  text-shadow: #f5f5f5 0 1px 0;
+  border-radius: 50px; 
+  box-shadow: 0px 0px 2px 0px #a6a6a6; 
+  opacity: 0.9; 
+  position: absolute;
+}
+.graticule {
+  fill: none;
+  stroke: #8f8f8f;
+  stroke-width: .5px;
+  stroke-opacity: .5;
+}
+.equator {
+  stroke: red;
+  stroke-width: 1px;
+} */

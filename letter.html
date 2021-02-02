@@ -1,1 +1,260 @@
-letter.html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>1Letter1Smile Mockup</title>
+    </head>
+
+
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="index.html" class="nav__logo"><img src="assets/img/logo.png" alt=""></a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="letter.html" class="nav__link">Write a Letter</a></li>
+                        <li class="nav__item"><a href="register.html" class="nav__link">Register/Login</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">More</a></li>
+
+                        <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        
+        <main class="l-main">
+            <!--========== HOME ==========-->
+            
+            <section class="home" id="home">
+                <div class="letter__container bd-container bd-grid">
+                    
+                    <img src="assets/img/teen.gif" alt="" class="home__letter__img">
+
+                    <div class="home__letter__data">
+                        <!-- <img src="assets/img/logo.png" alt="" class="logo__img"> -->
+                        <img src="assets/img/heart.gif" alt="" class="home__logo">
+                        <h1 class="home__letter__title">Write a Letter </h1>
+                        <h2 class="home__letter__subtitle">Start here</h2>
+                        
+                    </div>
+                    
+                    <img src="assets/img/grandma.gif" alt="" class="home__letter__img">
+
+                    
+                </div>
+            </section>
+            
+                    <!--========== MENU ==========-->
+                    <section class="menu section bd-container" id="menu">
+                        <span class="section-subtitle">Step 1</span>
+                        <h2 class="section-title">Select your recipient</h2>
+                        <p>Your letter can potentially be sent to many people all over the world (many isolated people are waiting for your sweet words).</p>
+        
+                        <div class="menu__container bd-grid">
+                            <div class="menu__content">
+                                <img src="assets/img/elderlywoman.png" alt="" class="menu__img">                                <h3 class="menu__name">Elderly Woman</h3>
+                                <!-- <span class="menu__detail">Make a smile</span> -->
+                                <!-- <span class="menu__preci">$22.00</span> -->
+                                <!-- <a href="#" class="button menu__button"><i class='bx bxs-right-arrow-alt'></i></a> -->
+                            </div>
+        
+                            <div class="menu__content">
+                                <img src="assets/img/elderlyman.png" alt="" class="menu__img">
+                                <h3 class="menu__name">Elderly Man</h3>
+                                <!-- <span class="menu__detail">Care Home or School</span> -->
+                                <!-- <span class="menu__preci">$12.00</span> -->
+                                <!-- <a href="register.html" class="button menu__button"><i class='bx bxs-right-arrow-alt'></i></a> -->
+                            </div>
+                        </div>
+                    </section>
+
+            <!-- WRITE YOUR LETTER -->
+            <section class="letter" id="letter">
+                <span class="section-subtitle">Step 2</span>
+                <h2 class="section-title">Write your letter</h2>
+                <p>Brainstorm some kind words, a funny story, or a happy memory that you'd like 
+                    to share. Then get writing! We ask your letter be at least 250 words long, 
+                    they are going to brighten someone's day! Include a photo! This can be of 
+                    yourself, of nature, or even something you baked. </p>
+
+                <div class="wrapper">
+                    <div class="letter__title">Dear Sir,</div>
+                    <div class="letter__form">
+                        <div class="input__field">
+                            <textarea name="letter__content" id="letter__content" cols="80" rows="20"></textarea>
+                        </div>
+                        <div class="input__field">
+                            <label>Signature</label>
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--========== LOCATION ==========-->
+            <section class="location" id="location">
+                <span class="section-subtitle">Step 3</span>
+                <h2 class="section-title">Choose your location</h2>
+                <p>
+                    Select the country and care home your letter sent 
+                    will be sent to. Have a place in mind? If not, 
+                    we can choose for you.
+                </p>
+                <!-- <h4>Your location is: <span class="city"></span></h4> -->
+                <div id="container"></div>
+
+                <script src="https://d3js.org/d3.v3.min.js"></script>
+                <script src="https://d3js.org/d3.geo.projection.v0.min.js"></script>
+                <script src="https://d3js.org/topojson.v1.min.js"></script>
+                <script src="map.js"></script>
+                <link rel="stylesheet" href="map.css">
+            </section>
+        
+                    
+
+
+
+           <!--========== INFORMATION ==========-->
+            <section class="information" id="information">
+                <span class="section-subtitle">Step 4</span>
+                <h2 class="section-title">Your Information</h2>
+                <p>Verify your age and include your information. 
+                    You may include a personal phone number only 
+                    if you are 18 years or older.
+                </p>
+                <div class="wrapper">
+                    <div class="letter__title">Dear Sir,</div>
+                    <div class="letter__form">
+                        <div class="input__field">
+                            <label>First Name</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="input__field">
+                            <label>Last Name</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="input__field">
+                            <label>City</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="input__field">
+                            <label>Postal Code</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="input__field">
+                            <label>Country</label>
+                            <input type="text" class="input">
+                        </div>
+
+                        <div class="input__field terms">
+                            <label class="check">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <p>I agree for my letter to be anonymously published on 1L1S social media, presses, gallery</p>
+                        </div>
+                        <div class="input__field terms">
+                            <label class="check">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <p>I agree to Terms and Conditions</p>
+                        </div> 
+                        <a href="#" class="button">Make my letter</a>
+                    </div>
+                </div>
+                
+                
+            </section>
+        </main>
+        
+
+
+       
+
+        
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">1Letter1Smile</a>
+                    <span class="footer__description">Non Profit</span>
+                    <div>
+                        <a href="https://www.facebook.com/1-lettre-1-sourire-104735304495540/" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/1lettre1sourire/?hl=fr" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Services</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Write a Letter</a></li>
+                        <li><a href="#" class="footer__link">About</a></li>
+                        <li><a href="#" class="footer__link">FAQs</a></li>
+                        <li><a href="#" class="footer__link">Our Sponsors</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Information</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Register/Login</a></li>
+                        <li><a href="#" class="footer__link">Donate</a></li>
+                        <li><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li><a href="#" class="footer__link">Terms of services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Address</h3>
+                    <ul>
+                        <li>Lille - France</li>
+                        <li>+33 6 46 48 08 02.</li>
+                        <li>1lettre1sourire.contact@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 2020 1Letter1Smile. All right reserved</p>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="assets/js/main.js"></script>
+
+        <!-- LOADER
+        <div class="loading">
+            <div class="loading__dot"></div> 
+            <div class="loading__dot"></div> 
+            <div class="loading__dot"></div> 
+        </div> -->
+
+
+    </body>
+</html>

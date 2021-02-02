@@ -103,7 +103,7 @@ const sr = ScrollReveal({
     // reset: true
 });
 
-sr.reveal(`.home__data, .home__img, .home__logo,
+sr.reveal(`.home__data, .home__img, .home__logo, .home__letter__img, .home__letter__content, .home__letter__data,
             .about__data, .about__img,
             .services__content, .services__button, .menu__content,
             .app__data, .app__img,
@@ -125,3 +125,35 @@ sr.reveal(`.home__data, .home__img, .home__logo,
 $(window).on("load",function(){
     $(".loading").fadeOut("slow");
 }); */}
+
+
+
+
+// REGISTER FORM
+/*===== LOGIN SHOW and HIDDEN =====*/
+const signUp = document.getElementById('sign-up'),
+    signIn = document.getElementById('sign-in'),
+    loginIn = document.getElementById('login-in'),
+    loginUp = document.getElementById('login-up')
+
+
+signUp.addEventListener('click', ()=>{
+    // Remove classes first if they exist
+    loginIn.classList.remove('block')
+    loginUp.classList.remove('none')
+
+    // Add classes
+    loginIn.classList.toggle('none')
+    loginUp.classList.toggle('block')
+})
+
+signIn.addEventListener('click', ()=>{
+    // Remove classes first if they exist
+    loginIn.classList.remove('none')
+    loginUp.classList.remove('block')
+
+    // Add classes
+    loginIn.classList.toggle('block')
+    loginUp.classList.toggle('none')
+})
+
