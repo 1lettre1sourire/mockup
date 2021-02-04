@@ -421,10 +421,19 @@ img{
 }
 
 /*========== MENU ==========*/
+.menu{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 50%;
+}
+  
+
 .menu__container{
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
 }
+
 
 .menu__content{
   position: relative;
@@ -782,7 +791,6 @@ img{
   height: 150vh;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  background-color: var(--main-blue);
   margin-top: var(--mb-4);
 
   height: calc(130vh + var(--header-height));
@@ -790,7 +798,7 @@ img{
 }
 
 
-.login_header{
+.login__header{
   box-shadow: 0 2px 4px rgba(0,0,0,.1);
   background-color: #fff !important;
   transition: background-color 200ms linear
@@ -998,223 +1006,137 @@ img{
   }
 }
 
-/********** LETTER *****************/
+/* ***************************************************************************************************************************** */
+/********************************************************* LETTER FORM *********************************************************/
+/* ***************************************************************************************************************************** */
+
 .letter{
+  height: 150vh;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: var(--mb-6);
   text-align: center;
-}
-
-.wrapper{
-    max-width: 700px;
-    width: 100%;
-    background-color: var(--main-blue);
-    margin: 20px auto;
-    padding: 30px;
-    box-shadow: 1px 1px 2px rgba(0,0,0,.12);
-    border-radius: 25px;
-    align-content: center;
-}
-
-.wrapper .letter__title{
-  font-weight: 400;
-  font-size: var(--h3-font-size);
-  margin-bottom: .5rem;
-  color: var(--title);
-}
-
-.wrapper .letter__form{
-  width: 100%;
-}
-
-.wrapper .letter__form .input__field{
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.wrapper .letter__form .input__field label{
-   width: 100px;
-   /* color: #757575; */
-   margin-right: 10px;
-  /* font-size: 14px; */
-  
-  font-weight: 400;
-  font-size: var(--h3-font-size);
-  /* margin-bottom: .5rem; */
-  color: var(--title);
-}
-
-.wrapper .letter__form .input__field .input,
-.wrapper .letter__form .input__field .letter__content{
   width: 50%;
-  outline: none;
-  border: 1px solid #d5dbd9;
-  font-size: 15px;
-  padding: 8px 10px;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-  align-self: center;
 }
 
-.wrapper .letter__form .input__field .textarea{
+.letter__form{
+  position: relative;
+  margin-top: 50px;
+}
+
+.letter__paper{
+  position: flex;
+  bottom: 1rem;
   width: 100%;
-  height: 125px;
+  background-color: var(--front-box);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(35,0,77,.2);
+}
+
+.letter__box__heading{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: .5rem;
+  padding: 1.125rem;
+  background-color: var(--slot);
+  margin-top: 1rem;
+  width: 200px;
+  border-radius: .5rem;
+}
+
+.letter__box__body{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: .5rem;
+  padding: 1.125rem;
+  background-color: var(--slot);
+  margin-top: 1rem;
+  width: 100%;
+  height: 400px;
+  border-radius: .5rem;
+  vertical-align: var(--mb-1);
+  text-align: top;
+}
+
+.letter__box__signature{
+  /* display: grid; */
+  grid-template-columns: max-content 1fr;
+  column-gap: .5rem;
+  padding: 1.125rem;
+  background-color: var(--slot);
+  margin-top: 1rem;
+  /* width: 250px; */
+  border-radius: .5rem;
+  /* right: 1rem; */
+
+  display: block;
+  width: max-content;
+  margin-left: auto;
+}
+
+.letter__input__heading{
+  border: none;
+  width: 160px;
+  outline: none;
+  font-size: var(--normal-font-size);
+  font-weight: 700;
+  color: var(--text);
+  background-color: var(--slot);
+}
+
+textarea{
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: var(--normal-font-size);
+  font-weight: 700;
+  color: var(--text);
+  background-color: var(--slot);
   resize: none;
+  font-family: var(--normal-font-size);
 }
 
-.wrapper .letter__form .input__field .custom_select{
-  position: relative;
-  width: 100%;
-  height: 37px;
-}
-
-.wrapper .letter__form .input__field .custom_select:before{
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: 10px;
-  border: 8px solid;
-  border-color: #d5dbd9 transparent transparent transparent;
-  pointer-events: none;
-}
-
-.wrapper .letter__form .input__field .custom_select select{
-  -webkit-appearance: none;
-  -moz-appearance:   none;
-  appearance:        none;
+.letter__input__signature{
+  border: none;
+  width: 200px;
   outline: none;
-  width: 100%;
-  height: 100%;
-  border: 0px;
-  padding: 8px 10px;
-  font-size: 15px;
-  border: 1px solid #d5dbd9;
-  border-radius: 3px;
+  font-size: var(--normal-font-size);
+  font-weight: 700;
+  color: var(--text);
+  background-color: var(--slot);
 }
 
-
-.wrapper .letter__form .input__field .input:focus,
-.wrapper .letter__form .input__field .textarea:focus,
-.wrapper .letter__form .input__field .custom_select select:focus{
-  border: 1px solid #fec107;
+.letter__input::placeholder{
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  color: var(--placeholder);
+  background-color: var(--slot);
 }
 
-.wrapper .letter__form .input__field p{
-   font-size: 14px;
-   color: #757575;
-}
-.wrapper .letter__form .input__field .check{
-  width: 15px;
-  height: 15px;
-  position: relative;
+.upload__button{
   display: block;
-  cursor: pointer;
+  padding: 1rem;
+  margin: 2rem 0 0 0;
+  background-color: var(--button);
+  color: var(--button-text);
+  font-weight: 600;
+  text-align: center;
+  border-radius: .5rem;
+  transition: .3s;
 }
-.wrapper .letter__form .input__field .check input[type="checkbox"]{
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+
+.upload__button:hover{
+  background-color: var(--button-hover);
+  color: var(--button-text);
 }
-.wrapper .letter__form .input__field .check .checkmark{
-  width: 15px;
-  height: 15px;
-  border: 1px solid #fec107;
+
+.letter__file{
   display: block;
-  position: relative;
+  /* padding: 1rem;
+  margin: 2rem 0 0 0; */
+  text-decoration: underline;
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  color: var(--fgdhaa);
 }
-.wrapper .letter__form .input__field .check .checkmark:before{
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 2px;
-  width: 5px;
-  height: 2px;
-  border: 2px solid;
-  border-color: transparent transparent #fff #fff;
-  transform: rotate(-45deg);
-  display: none;
-}
-.wrapper .letter__form .input__field .check input[type="checkbox"]:checked ~ .checkmark{
-  background: #fec107;
-}
-
-.wrapper .letter__form .input__field .check input[type="checkbox"]:checked ~ .checkmark:before{
-  display: block;
-}
-
-.wrapper .letter__form .input__field .btn{
-  width: 100%;
-   padding: 8px 10px;
-  font-size: 15px; 
-  border: 0px;
-  background:  #fec107;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 3px;
-  outline: none;
-}
-
-.wrapper .letter__form .input__field .btn:hover{
-  background: #ffd658;
-}
-
-.wrapper .letter__form .input__field:last-child{
-  margin-bottom: 0;
-}
-
-@media (max-width:420px) {
-  .wrapper .letter__form .input__field{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .wrapper .letter__form .input__field label{
-    margin-bottom: 5px;
-  }
-  .wrapper .letter__form .input__field.terms{
-    flex-direction: row;
-  }
-}
-
-
-/* ****************** LOCATION ***************** */
-/* 
-.country:hover{
-  stroke: #393939;
-  stroke-width: 1.5px;
-}
-.text{
-  font-size: 10px;
-  text-transform: capitalize;
-}
-#container {
-  margin: 50px;
-  border: 1px solid;
-  border-radius: 50px;
-  height:80%;
-  overflow:hidden;
-  background: #fff;
-}
-.hidden { 
-  display: none; 
-}
-div.tooltip {
-  color: #222; 
-  background: #fff; 
-  padding: .5em; 
-  text-shadow: #f5f5f5 0 1px 0;
-  border-radius: 50px; 
-  box-shadow: 0px 0px 2px 0px #a6a6a6; 
-  opacity: 0.9; 
-  position: absolute;
-}
-.graticule {
-  fill: none;
-  stroke: #8f8f8f;
-  stroke-width: .5px;
-  stroke-opacity: .5;
-}
-.equator {
-  stroke: red;
-  stroke-width: 1px;
-} */

@@ -90,28 +90,44 @@
                     </section>
 
             <!-- WRITE YOUR LETTER -->
-            <section class="letter__container" id="letter">
-                <span class="section-subtitle">Step 2</span>
-                <h2 class="section-title">Write your letter</h2>
-                <p class="paragraph" id="paragraph">Brainstorm some kind words, a funny story, or a happy memory that you'd like 
-                    to share. Then get writing! We ask your letter be at least 250 words long, 
-                    they are going to brighten someone's day! Include a photo! This can be of 
+            <section class="letter">
+                <div class="letter__content">
+                    <span class="section-subtitle">Step 2</span>
+                    <h2 class="section-title">Write your letter</h2>
+                    <p class="paragraph" id="paragraph">Brainstorm some kind words, a funny story, or a happy memory that you'd like 
+                    to share. Your letter must be at least 250 words long and you can include a photo! This can be of 
                     yourself, of nature, or even something you baked. </p>                
 
-                <div class="wrapper">
-                    <div class="letter__title">Dear Sir,</div>
                     <div class="letter__form">
-                        <div class="input__field">
-                            <textarea name="letter__content" id="letter__content" cols="80" rows="20"></textarea>
-                        </div>
-                        <div class="input__field">
-                            <label>Signature</label>
-                            <input type="text" class="input">
-                        </div>
+                        <form action="" class="letter__paper">
+                            
+                            <div class="letter__box__heading">
+                                <input type="text" placeholder="Dear Sir/Madam," class="letter__input__heading" maxlength="20">
+                            </div>
+
+                            <div class="letter__box__body">
+                                <textarea placeholder="Write your letter here" class="letter__input__body" rows="40" cols="70" maxlength="4000"></textarea>
+                            </div>
+
+                            <div class="letter__box__signature">
+                                <input type="text" placeholder="Sincerely, Y/N" class="letter__input__signature" maxlength="30">
+                            </div>
+                        </form>
                     </div>
+
+                    <a href="#" class="upload__button">Upload photo</a>
+                    <span class="letter__file" id="letter__file">No file</span>
+                    <p>* Attach a photo to your letter to make it more personable!</p>
+                    <div class="input__field terms">
+                        <label class="check">
+                            <input type="checkbox">
+                            <span class="checkmark">I've double checked my letter</span>
+                        </label>
+                    </div> 
+
                 </div>
             </section>
-
+                
 
             <!--========== LOCATION ==========-->
             <!-- <section class="location__container" id="location"> -->
