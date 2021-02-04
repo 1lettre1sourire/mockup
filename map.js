@@ -5,14 +5,14 @@ d3.select(window).on("resize", throttle);
 // .on("zoom", move);
 
 
-var width = document.getElementById('container').offsetWidth;
+var width = document.getElementById('location__map').offsetWidth;
 var height = width/1.75;
 
 var topo,projection,path,svg,g;
 
 var graticule = d3.geo.graticule();
 
-var tooltip = d3.select("#container").append("div").attr("class", "tooltip hidden");
+var tooltip = d3.select("#location__map").append("div").attr("class", "tooltip hidden");
 
 setup(width,height);
 
@@ -23,7 +23,7 @@ function setup(width,height){
 
   path = d3.geo.path().projection(projection);
 
-  svg = d3.select("#container").append("svg")
+  svg = d3.select("#location__map").append("svg")
   .attr("width", width)
   .attr("height", height + 8)
   // .call(zoom)
@@ -69,8 +69,8 @@ function draw(topo) {
   .style("fill", function(d, i) { return "#BBDEFB";return d.properties.color; });
 
   //offsets for tooltips
-  var offsetL = document.getElementById('container').offsetLeft+20;
-  var offsetT = document.getElementById('container').offsetTop+10;
+  var offsetL = document.getElementById('location__map').offsetLeft+20;
+  var offsetT = document.getElementById('location__map').offsetTop+10;
 
   //tooltips
   country
@@ -98,7 +98,7 @@ function draw(topo) {
 
 
 function redraw() {
-  width = document.getElementById('container').offsetWidth;
+  width = document.getElementById('location__map').offsetWidth;
   height = width / 2;
   d3.select('svg').remove();
   setup(width,height);

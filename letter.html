@@ -106,7 +106,7 @@
                             </div>
 
                             <div class="letter__box__body">
-                                <textarea placeholder="Write your letter here" class="letter__input__body" rows="40" cols="70" maxlength="4000"></textarea>
+                                <textarea placeholder="Start writing here" class="letter__input__body" rows="40" cols="70" maxlength="4000"></textarea>
                             </div>
 
                             <div class="letter__box__signature">
@@ -116,6 +116,11 @@
                     </div>
 
                     <a href="#" class="upload__button">Upload photo</a>
+                    <!-- <form action="/action_page.php">
+                        <input type="file" id="myFile" name="filename" class="upload__button">Upload photo
+                        <input type="submit">
+                      </form> -->
+
                     <span class="letter__file" id="letter__file">No file</span>
                     <p>* Attach a photo to your letter to make it more personable!</p>
                     <div class="input__field terms">
@@ -130,92 +135,68 @@
                 
 
             <!--========== LOCATION ==========-->
-            <!-- <section class="location__container" id="location"> -->
-
-            <section class="services__container" id="location">
-                <span class="section-subtitle">Step 3</span>
-                <h2 class="section-title">Choose your location</h2>
-                <p>
-                    Select the country and care home your letter sent 
-                    will be sent to. Have a place in mind? If not, 
-                    we can choose for you.
-                </p>
-                <!-- <h4>Your location is: <span class="city"></span></h4> -->
-                <div id="container"></div>
-
-                <script src="https://d3js.org/d3.v3.min.js"></script>
-                <script src="https://d3js.org/d3.geo.projection.v0.min.js"></script>
-                <script src="https://d3js.org/topojson.v1.min.js"></script>
-                <script src="map.js"></script>
-                <link rel="stylesheet" href="map.css">
+            <section class="location">
+                <div class="location__content">
+                    <span class="section-subtitle">Step 3</span>
+                    <h2 class="section-title">Choose your location</h2>
+                    <p> Select the country and care home your letter sent will be sent to. Have a place in mind? If not, we can choose for you.</p>
+                </div>
+                <div id="location__map"></div>
+                    <script src="https://d3js.org/d3.v3.min.js"></script>
+                    <script src="https://d3js.org/d3.geo.projection.v0.min.js"></script>
+                    <script src="https://d3js.org/topojson.v1.min.js"></script>
+                    <script src="map.js"></script>
+                    <link rel="stylesheet" href="styles.css">
+                
             </section>
-        
-                    
-
-
 
            <!--========== INFORMATION ==========-->
-           <!-- <section class="information__container" id="information"> -->
-
-            <section class="services__container" id="information">
+            <section class="information">
                 <span class="section-subtitle">Step 4</span>
                 <h2 class="section-title">Your Information</h2>
-                <p>Verify your age and include your information. 
-                    You may include a personal phone number only 
-                    if you are 18 years or older.
-                </p>
-                <div class="wrapper">
-                    <div class="letter__title">Dear Sir,</div>
-                    <div class="letter__form">
-                        <div class="input__field">
-                            <label>First Name</label>
-                            <input type="text" class="input">
-                        </div>
-                        <div class="input__field">
-                            <label>Last Name</label>
-                            <input type="text" class="input">
-                        </div>
-                        <div class="input__field">
-                            <label>City</label>
-                            <input type="text" class="input">
-                        </div>
-                        <div class="input__field">
-                            <label>Postal Code</label>
-                            <input type="text" class="input">
-                        </div>
-                        <div class="input__field">
-                            <label>Country</label>
-                            <input type="text" class="input">
-                        </div>
-
-                        <div class="input__field terms">
-                            <label class="check">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                            <p>I agree for my letter to be anonymously published on 1L1S social media, presses, gallery</p>
-                        </div>
-                        <div class="input__field terms">
-                            <label class="check">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                            <p>I agree to Terms and Conditions</p>
-                        </div> 
+                <p>Verify your age and include your information. You may include a personal phone number only if you are 18 years or older.</p>
+                <div class="information__form">
+                    <div class="input__field">
+                        <label>First Name</label>
+                        <input type="text" class="input">
                     </div>
-                </div>        
+                    <div class="input__field">
+                        <label>Last Name</label>
+                        <input type="text" class="input">
+                    </div>
+                    <div class="input__field">
+                        <label>City</label>
+                        <input type="text" class="input">
+                    </div>
+                    <div class="input__field">
+                        <label>Postal Code</label>
+                        <input type="text" class="input">
+                    </div>
+                    <div class="input__field">
+                        <label>Country</label>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="input__field terms">
+                        <label class="check">
+                            <input type="checkbox">
+                            <span class="checkmark">I agree for my letter to be anonymously <br> published on 1L1S social media, presses, gallery</span>
+                        </label>
+                    </div>
+                    <div class="input__field terms">
+                        <label class="check">
+                            <input type="checkbox">
+                            <span class="checkmark">I agree to Terms and Conditions</span>
+                        </label>
+                    </div> 
+                </div> 
+
+                <a href="#" class="button">Make my letter</a>
             </section>
 
-            <a href="#" class="button">Make my letter</a>
-
         </main>
-        
-
-
-       
 
         
-
         <!--========== FOOTER ==========-->
         <footer class="footer section bd-container">
             <div class="footer__container bd-grid">

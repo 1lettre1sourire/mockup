@@ -21,7 +21,7 @@
   --title: #393939;
   --icon: #F9D564;
   --slot: #FFFFFF;
-  --placeholder: #A6A6A6;
+  --placeholder: #d4d4d4;
   --text: #393939;
   --fgdhaa: #393939;
   --button: #F9D564;
@@ -1011,7 +1011,7 @@ img{
 /* ***************************************************************************************************************************** */
 
 .letter{
-  height: 150vh;
+  /* height: 150vh; */
   margin-left: auto;
   margin-right: auto;
   margin-top: var(--mb-6);
@@ -1083,35 +1083,47 @@ img{
   font-weight: 700;
   color: var(--text);
   background-color: var(--slot);
+
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  background-color: var(--slot);
 }
 
 textarea{
   border: none;
   outline: none;
   width: 100%;
-  font-size: var(--normal-font-size);
   font-weight: 700;
   color: var(--text);
-  background-color: var(--slot);
   resize: none;
-  font-family: var(--normal-font-size);
+
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  background-color: var(--slot);
 }
 
 .letter__input__signature{
   border: none;
   width: 200px;
   outline: none;
-  font-size: var(--normal-font-size);
   font-weight: 700;
   color: var(--text);
+
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
   background-color: var(--slot);
 }
 
-.letter__input::placeholder{
-  font-size: var(--normal-font-size);
-  font-family: var(--body-font);
+.letter__input__body::placeholder{
   color: var(--placeholder);
-  background-color: var(--slot);
+}
+
+.letter__input__heading::placeholder{
+  color: var(--placeholder);
+}
+
+.letter__input__signature::placeholder{
+  color: var(--placeholder);
 }
 
 .upload__button{
@@ -1139,4 +1151,84 @@ textarea{
   font-size: var(--small-font-size);
   font-weight: 600;
   color: var(--fgdhaa);
+}
+
+
+/* ***************************************************************************************************************************** */
+/********************************************************* LOCATION *********************************************************/
+/* ***************************************************************************************************************************** */
+
+.location{
+  margin-top: var(--mb-6);
+}
+
+.location__content{
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: var(--mb-6); */
+  text-align: center;
+
+  position: relative;
+  width: 50%;
+}
+
+/* MAP */
+.country:hover{
+  stroke: #393939;
+  stroke-width: 1.5px;
+}
+.text{
+  font-size: 10px;
+  text-transform: capitalize;
+}
+.location__map{
+  margin: 0px;
+  border-radius: 50px;
+  overflow:hidden;
+  background: #fff;
+  height: 580px;
+}
+.hidden { 
+  display: none; 
+}
+div.tooltip {
+  color: #222; 
+  background: #fff; 
+  padding: .5em; 
+  text-shadow: #f5f5f5 0 1px 0;
+  border-radius: 50px; 
+  box-shadow: 0px 0px 2px 0px #a6a6a6; 
+  opacity: 0.9; 
+  position: absolute;
+}
+.graticule {
+  fill: none;
+  stroke: #8f8f8f;
+  stroke-width: .5px;
+  stroke-opacity: .5;
+}
+
+
+/* ***************************************************************************************************************************** */
+/********************************************************* YOUR INFORMATION *********************************************************/
+/* ***************************************************************************************************************************** */
+
+.information{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--mb-6);
+  text-align: center;
+  width: 50%;
+}
+
+.information__form{
+  position: relative;
+  margin-top: 50px;
+  position: flex;
+  bottom: 1rem;
+  width: 100%;
+  background-color: var(--front-box);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(35,0,77,.2);
 }
