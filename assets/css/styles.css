@@ -4,6 +4,9 @@
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 4rem;
+  
+/* SCROLL BEHAVIOUR */
+scroll-behavior: smooth;
 
   /*========== Colors ==========*/
   --first-color: #393939;
@@ -53,6 +56,7 @@
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
+  --mb-section: 200px;
 
   /*========== z index ==========*/
   --z-tooltip: 10;
@@ -1014,7 +1018,7 @@ img{
   /* height: 150vh; */
   margin-left: auto;
   margin-right: auto;
-  margin-top: var(--mb-6);
+  margin-top: var(--mb-section);
   text-align: center;
   width: 50%;
 }
@@ -1159,13 +1163,14 @@ textarea{
 /* ***************************************************************************************************************************** */
 
 .location{
-  margin-top: var(--mb-6);
+  margin-top: var(--mb-section);
 }
 
 .location__content{
   margin-left: auto;
   margin-right: auto;
-  /* margin-top: var(--mb-6); */
+  margin-top: var(--mb-6);
+  margin-bottom: var(--mb-6);
   text-align: center;
 
   position: relative;
@@ -1182,11 +1187,10 @@ textarea{
   text-transform: capitalize;
 }
 .location__map{
-  margin: 0px;
   border-radius: 50px;
   overflow:hidden;
   background: #fff;
-  height: 580px;
+  height: 50%;
 }
 .hidden { 
   display: none; 
@@ -1216,7 +1220,7 @@ div.tooltip {
 .information{
   margin-left: auto;
   margin-right: auto;
-  margin-top: var(--mb-6);
+  margin-top: var(--mb-section);
   width: 50%;
 }
 

@@ -6,7 +6,7 @@ d3.select(window).on("resize", throttle);
 
 
 var width = document.getElementById('location__map').offsetWidth;
-var height = width/1.75;
+var height = width/2;
 
 var topo,projection,path,svg,g;
 
@@ -18,8 +18,8 @@ setup(width,height);
 
 function setup(width,height){
   projection = d3.geo.mercator()
-  .translate([(width/2), (height/2)])
-  .scale( width / 3.5/ Math.PI);
+  .translate([(width/2), (height/1.4)])
+  .scale( width / 2.5/ Math.PI);
 
   path = d3.geo.path().projection(projection);
 
