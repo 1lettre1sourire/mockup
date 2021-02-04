@@ -1217,18 +1217,65 @@ div.tooltip {
   margin-left: auto;
   margin-right: auto;
   margin-top: var(--mb-6);
-  text-align: center;
   width: 50%;
 }
 
 .information__form{
   position: relative;
   margin-top: 50px;
-  position: flex;
   bottom: 1rem;
   width: 100%;
   background-color: var(--front-box);
-  padding: 2rem 1rem;
+  padding: 2rem 4rem;
   border-radius: 1rem;
   box-shadow: 0 8px 20px rgba(35,0,77,.2);
+  text-align: center;
+
+}
+
+.information__box{
+  width: 100%;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.information__input {
+  display: block;
+  column-gap: .5rem;
+  padding: .5rem;
+  background-color: var(--slot);
+  width: 100%;
+  border-radius: .5rem;
+  border: none;
+  /* border: 2px solid var(--title-color); */
+}
+
+label{
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  border: none;
+  outline: none;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.information__terms{
+  display: block;
+}
+
+.send__button{
+  display: block;
+  padding: 1rem;
+  margin: 2rem 0 0 0;
+  background-color: var(--button);
+  color: var(--button-text);
+  font-weight: 600;
+  text-align: center;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.send__button:hover{
+  background-color: var(--button-hover);
+  color: var(--first-color);
 }
