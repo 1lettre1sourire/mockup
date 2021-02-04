@@ -1015,7 +1015,6 @@ img{
 /* ***************************************************************************************************************************** */
 
 .letter{
-  /* height: 150vh; */
   margin-left: auto;
   margin-right: auto;
   margin-top: var(--mb-section);
@@ -1032,6 +1031,7 @@ img{
   position: flex;
   bottom: 1rem;
   width: 100%;
+  min-width: 170px;
   background-color: var(--front-box);
   padding: 2rem 1rem;
   border-radius: 1rem;
@@ -1039,13 +1039,13 @@ img{
 }
 
 .letter__box__heading{
-  display: grid;
-  grid-template-columns: max-content 1fr;
   column-gap: .5rem;
   padding: 1.125rem;
   background-color: var(--slot);
   margin-top: 1rem;
-  width: 200px;
+  width: 26%;
+  height: 60px;
+  min-width: 170px;
   border-radius: .5rem;
 }
 
@@ -1062,16 +1062,25 @@ img{
 }
 
 .letter__box__signature{
-  grid-template-columns: max-content 1fr;
+  /* grid-template-columns: max-content 1fr;
   column-gap: .5rem;
   padding: 1.125rem;
   background-color: var(--slot);
   margin-top: 1rem;
-  border-radius: .5rem;
+  border-radius: .5rem; */
 
   display: block;
   width: max-content;
   margin-left: auto;
+
+  column-gap: .5rem;
+  padding: 1.125rem;
+  background-color: var(--slot);
+  margin-top: 1rem;
+  width: 40%;
+  height: 60px;
+  min-width: 170px;
+  border-radius: .5rem;
 }
 
 .letter__input__heading{
@@ -1109,7 +1118,7 @@ textarea{
 
 .letter__input__signature{
   border: none;
-  width: 200px;
+  width: 100%;
   outline: none;
   font-weight: 700;
   color: var(--text);
