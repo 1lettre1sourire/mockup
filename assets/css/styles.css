@@ -742,18 +742,19 @@ img{
 
 
 /* ***************************************************************************************************************************** */
-/********************************************************* REGISTER FORM *********************************************************/
+/********************************************************* LOGIN FORM *********************************************************/
 /* ***************************************************************************************************************************** */
 
 
 /*===== LOGIN =====*/
 .login{
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: repeat(2,2fr);
+
   height: 150vh;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  margin-top: var(--mb-4);
+  margin-top: var(--mb-6);
 
   height: calc(130vh + var(--header-height));
   align-content: center;
@@ -765,11 +766,6 @@ img{
   background-color: #fff !important;
   transition: background-color 200ms linear
 }
-
-.login__content{
-  display: grid;
-}
-
 .login__img{
   align-items: center;
 }
@@ -783,6 +779,7 @@ img{
 .login__forms{
   position: relative;
   height: 368px;
+  margin-top: 60px;
 }
 
 .login__registre, .login__create{
@@ -932,12 +929,6 @@ img{
     overflow: hidden;
   }
 
-  .login__content{
-    grid-template-columns: repeat(1, max-content);
-    justify-content: center;
-    align-items: center;
-    /* margin-left : 10rem; */
-  }
 
   /* OLD LADY BACKGROUND COLOR */
   .login__img{
@@ -1341,4 +1332,54 @@ label{
 .send__button:hover{
   background-color: var(--button-hover);
   color: var(--first-color);
+}
+
+
+
+/* ***************************************************************************************************************************** */
+/********************************************************* REGISTER BUTTON *********************************************************/
+/* ***************************************************************************************************************************** */
+
+.register__button{
+  margin-top: 1rem;
+
+  display: block;
+  
+  bottom: 1rem;
+  width: 100%;
+  background-color: var(--slot);
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(35,0,77,.2);
+  animation-duration: .4s;
+  animation-name: animate-login;
+  align-items: center;
+}
+
+.register__button:hover{
+  background-color: var(--front-box);
+
+}
+.register__icon{
+  font-size: 4rem;
+  color: var(--icon);
+  float: left;
+  margin-right: 2rem;
+}
+
+.register__title{
+  font-size: var(--h2-font-size);
+  color: var(--title);
+  display: inline-block;
+  margin-left: 1rem;
+  vertical-align: text-top;
+}
+
+.register__body{
+  font-size: var(--small-font-size);
+  color: var(--title);
+  display: block;
+  margin-left: 1rem;
+  /* vertical-align: text-top; */
 }
