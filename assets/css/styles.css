@@ -1341,7 +1341,7 @@ label{
 /* ***************************************************************************************************************************** */
 
 .register__button{
-  margin-top: 1rem;
+  margin-top: 2rem;
 
   display: block;
   
@@ -1350,7 +1350,7 @@ label{
   background-color: var(--slot);
   padding: 2rem 2rem;
   border-radius: 1rem;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 8px 20px rgba(35,0,77,.2);
   animation-duration: .4s;
   animation-name: animate-login;
@@ -1358,21 +1358,20 @@ label{
 }
 
 .register__button:hover{
-  background-color: var(--front-box);
+  background-color: #ffedb4;
 
 }
 .register__icon{
-  font-size: 4rem;
+  font-size: 4.5rem;
   color: var(--icon);
   float: left;
   margin-right: 2rem;
 }
 
 .register__title{
-  font-size: var(--h2-font-size);
+  font-size: var(--h3-font-size);
   color: var(--title);
   display: inline-block;
-  margin-left: 1rem;
   vertical-align: text-top;
 }
 
@@ -1381,5 +1380,4 @@ label{
   color: var(--title);
   display: block;
   margin-left: 1rem;
-  /* vertical-align: text-top; */
 }
