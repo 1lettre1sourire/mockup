@@ -102,8 +102,14 @@ const sr = ScrollReveal({
     duration: 2000,
     // reset: true
 });
-
-sr.reveal(`.home__data, .home__img, .home__logo, .home__letter__img, .home__letter__content, .home__letter__data,
+// sr.reveal(`.home__data, .home__img, .home__logo, .home__letter__img, .home__letter__content, .home__letter__data,
+//             .about__data, .about__img,
+//             .services__content, .services__button, .menu__content,
+//             .app__data, .app__img,
+//             .contact__data, .contact__button,
+//             .letter, .location, .information,
+//             .footer__content`, {
+sr.reveal(`
             .about__data, .about__img,
             .services__content, .services__button, .menu__content,
             .app__data, .app__img,
