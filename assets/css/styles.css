@@ -339,6 +339,8 @@ img{
   width: 300px;
   justify-self: center;
   display: inline-block;
+  border-radius: 2rem;
+  margin-right: 2rem;
 }
 
 .home__letter__img{
