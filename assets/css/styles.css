@@ -456,6 +456,7 @@ img{
   width: 100px;
   align-self: center;
   margin-bottom: var(--mb-2);
+  border-radius: 2rem;
 }
 
 .menu__name, .menu__preci{
@@ -683,6 +684,22 @@ img{
       box-shadow: 0 8px 8px rgba(3,74,40,.15);
   }
   
+    /* TEAM ICON OPTIONS AND SIZE */
+
+  .team__container{
+    grid-template-columns: repeat(3, 100px);
+    column-gap: 1rem;
+  }
+  .team__content{
+    padding: 1.5rem;
+    background-color: var(--container-color);
+    /* width: 225px; */
+  }
+  .team__content:hover{
+      box-shadow: 0 8px 8px rgba(3,74,40,.15);
+  }
+
+
   .menu__img{
     width: 300px;
   }
@@ -1383,3 +1400,70 @@ label{
   display: block;
   margin-left: 1rem;
 }
+
+/* ***************************************************************************************************************************** */
+/********************************************************* TEAM SECTION *********************************************************/
+/* ***************************************************************************************************************************** */
+
+
+.team{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+}
+  
+
+.team__container{
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+
+.intern__container{
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+}
+
+.team__content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--container-color);
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(3,74,40,.15);
+  padding: .75rem;
+}
+
+.intern__content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: .5rem;
+  padding: .75rem;
+}
+
+.team__img{
+  width: 100%;
+  align-self: center;
+  margin-bottom: var(--mb-2);
+  border-radius: 2rem;
+}
+
+.team__name, .team__preci{
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+.team__name{
+  font-size: var(--normal-font-size);
+}
+
+.team__detail, .team__preci{
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.team__detail{
+  margin-bottom: var(--mb-1);
+}
+
